@@ -12,7 +12,7 @@ export async function cameraOff(videoElement, whenDone) {
 
 export async function takePhoto(videoRef, photoRef) {
   try {
-    const width = 360;
+    const width = 350;
     const height = 400;
 
     let photo = photoRef.current;

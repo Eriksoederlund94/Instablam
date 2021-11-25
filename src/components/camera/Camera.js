@@ -29,12 +29,10 @@ function Camera() {
   const { state, dispatch } = useContext(UiContext);
 
   console.log(canUseMd);
-  console.log(videoRef.current);
-
   let canvasState = state.canvas;
 
   async function cameraOn(videoElement, showMessage, whenDone) {
-    const width = 360;
+    const width = 350;
     const height = 400;
     const constraints = {
       video: { facingMode: 'user', width: width, height: height },

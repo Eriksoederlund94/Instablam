@@ -93,6 +93,17 @@ const HeaderTitleWrapper = styled.div`
       color: #8fb9c4;
     }
   }
+
+  @media screen and (max-width: 450px) {
+    .logo-container h1 {
+      font-size: 1rem;
+    }
+
+    .logo-container img {
+      width: 45px;
+      height: 45px;
+    }
+  }
 `;
 
 export default Header;

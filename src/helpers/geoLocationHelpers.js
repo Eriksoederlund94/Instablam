@@ -1,6 +1,4 @@
 export async function getLocationFromGeolocation(latitude, longitude, showMessage) {
-  console.log(latitude);
-
   const url = `https://geocode.xyz/${latitude},${longitude}?geoit=json&auth=15752455676636e15981152x56010`;
 
   try {
