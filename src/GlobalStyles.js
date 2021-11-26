@@ -20,11 +20,6 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
-  .App {
-		height: 100vh;
-		margin: 0 auto;
-	}
-
 	nav{
   text-align: center;
 	min-height: 10vh;

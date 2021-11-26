@@ -25,10 +25,7 @@ function Camera() {
   const [cameraIsOn, setCameraIsOn] = useState(false);
   const videoRef = useRef(null);
   const photoRef = useRef(null);
-
   const { state, dispatch } = useContext(UiContext);
-
-  console.log(canUseMd);
   let canvasState = state.canvas;
 
   async function cameraOn(videoElement, showMessage, whenDone) {
@@ -37,6 +34,7 @@ function Camera() {
     const constraints = {
       video: { facingMode: 'user', width: width, height: height },
     };
+
     try {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       videoElement.srcObject = stream;
@@ -73,7 +71,7 @@ function Camera() {
     <CameraWrapper>
       <div className='camera'>
         <p> {statusMessage} </p>
-        <video ref={videoRef}></video>
+        {canUseMd ? <video ref={videoRef}></video> : null}
         <div className='btn-container'>
           <button onClick={handleCameraToggle}>{cameraIsOn ? <RiCameraOffFill /> : <AiFillCamera />}</button>
           {cameraIsOn ? <CapturePhotoBtn photoRef={photoRef} videoRef={videoRef} /> : null}

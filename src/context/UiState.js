@@ -39,7 +39,7 @@ const initialState = {
     {
       id: 4,
       imgSrc: img4,
-      city: 'Lerum',
+      city: 'Landvetter',
       country: 'Sweden',
       date: '2019-01-16',
     },
